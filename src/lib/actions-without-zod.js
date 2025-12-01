@@ -1,7 +1,6 @@
 'use server'
 import { z } from "zod";
 
-// COPIA EXACTA DE LO MISMO DE ARRIBA
 const schema = z.object({
     id: z.union([z.coerce.number(), z.string().nullish()]),
     nombre: z.string().trim().min(2, "Debe tener al menos 2 letras").max(8, "Máximo 8 letras permitidas"),
